@@ -8,7 +8,7 @@
     </div>
     <div class="cartDetails">
     <img @click="togglePage()" src="../../assets/shopping-basket.png" alt="">
-    <span>{{ cart.length  }}</span>
+    <span>{{ productsInBasket  }}</span>
     </div>
    
    
@@ -18,10 +18,13 @@
 
 <script>
 
+
+
 export default{
+
     props:{
-        cart:{
-            type : Array,
+        productsInBasket:{
+            type : Number,
             required: true,
         },
         page:{
@@ -32,9 +35,14 @@ export default{
     methods:{
         togglePage(){
             this.$emit("togglePage")
-        }
+        },
+     
+        
        
-    }
+    },
+   
+    
+
 }
 </script>
 

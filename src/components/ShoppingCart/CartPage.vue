@@ -5,6 +5,7 @@
       <h2>{{ product.name }}</h2>
       <img :src="product.image" alt="">
       <div> Cost : {{ product.price }}</div>
+      <h4>Quantity : {{ product.quantity }}</h4>
       <button @click="removeFromCart(idx)">Remove From Cart</button>
       </div>
       <h3>CartTotal : {{ totalCostt }}</h3>
